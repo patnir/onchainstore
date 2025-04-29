@@ -17,7 +17,7 @@ export async function POST(req: Request) {
             currency: 'usd',
             product_data: {
               name: 'OnChain Store T-Shirt',
-              images: ['https://your-domain.com/shirt.png'],
+              images: ['https://onchainstore.vercel.app/shirt.png'],
             },
             unit_amount: price * 100, // Stripe uses cents
           },
