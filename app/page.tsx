@@ -74,16 +74,24 @@ export default function Home() {
             
             <div className="mb-6">
               <h2 className="text-sm font-medium text-gray-900 mb-2">Size</h2>
-              <div className="flex gap-2">
+              <div className="flex gap-3">
                 {['S', 'M', 'L', 'XL'].map((size) => (
                   <button
                     key={size}
                     onClick={() => setSelectedSize(size)}
-                    className={`w-12 h-12 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900 ${
-                      selectedSize === size
-                        ? 'border-gray-900 bg-gray-100'
-                        : 'border-gray-300 hover:border-gray-900'
-                    }`}
+                    className={`
+                      w-12 h-12 
+                      rounded-lg 
+                      cursor-pointer
+                      font-medium 
+                      transition-all 
+                      duration-200 
+                      ${
+                        selectedSize === size
+                        ? 'bg-black text-white border-2 border-black'
+                        : 'bg-white text-black border-2 border-gray-200 hover:border-gray-400'
+                      }
+                    `}
                   >
                     {size}
                   </button>
@@ -97,7 +105,7 @@ export default function Home() {
 
             <button
               onClick={handleCheckout}
-              className="w-full bg-black text-white py-4 px-6 rounded-md hover:bg-gray-900 transition-colors duration-200"
+              className="w-full cursor-pointer bg-black text-white py-4 px-6 rounded-md hover:bg-gray-900 transition-colors duration-200"
             >
               Add to Cart
             </button>
